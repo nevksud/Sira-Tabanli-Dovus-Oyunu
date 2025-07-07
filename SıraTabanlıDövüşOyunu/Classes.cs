@@ -1,8 +1,6 @@
-﻿using System.Reflection.Metadata.Ecma335;   
+﻿namespace BaseClasses;
 
-namespace BaseClasses;
-
-public class Entity
+public class Entity //Parent class
 
 {
     public int Health { get; set; } = 0;
