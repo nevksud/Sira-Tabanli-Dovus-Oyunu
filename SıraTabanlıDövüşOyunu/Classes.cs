@@ -32,10 +32,10 @@ public class Entity //Parent class
 } 
 public class Player : Entity //Child Class for Player
 {
-    int Health = 100;
-    int AttackPower = 5;
-    int DefencePower = 3;
-    string Name = "Gerald";
+    int PlayerHealth = 100;
+    int PlayerAttackPower = 5;
+    int PlayerDefencePower = 3;
+    string PlayerName = "Gerald";
 
     public Player(int health, int attackPower, int defensePower, string name) : base(health, attackPower, defensePower, name)
     {
@@ -44,10 +44,10 @@ public class Player : Entity //Child Class for Player
 
 public class Enemy : Entity //Child Class for Enemy
 {
-    int Health = 100;
-    int AttackPower = 5;
-    int DefencePower = 3;
-    string Name = "Org";
+    int EnemyHealth = 100;
+    int EnemyAttackPower = 5;
+    int EnemyDefencePower = 3;
+    string EnemyName = "Org";
 
     public Enemy(int health, int attackPower, int defensePower, string name) : base(health, attackPower, defensePower, name)
     {
