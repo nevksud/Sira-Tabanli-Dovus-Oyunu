@@ -1,7 +1,8 @@
-﻿namespace BaseClasses;
+﻿using System.Collections;
 
-public class Entity //Parent class
+namespace BaseClasses;
 
+public class Entity //Parent class  
 {
     public int Health { get; set; } = 0;
     public int AttackPower { get; set; } = 0;
@@ -9,21 +10,46 @@ public class Entity //Parent class
 
     public string Name { get; set; }
 
-    public Entity(int health, int attackPower, int defensePower, string name)
+    private static readonly Random random = new Random(); //Random Method from base Random CLass from C#  
+
+    public Entity(int health, int attackPower, int defensePower, string name) //Constructor for polymorphism  
     {
         Name = name;
         Health = health;
         AttackPower = attackPower;
         DefensePower = defensePower;
     }
-
     public bool IsAlive()
     {
         return Health > 0;
     }
-    public int TakeDamage()
+    public int TakeDamage() //For damage mechanic
     {
-        return DefensePower -= AttackPower;
+        int Dice = random.Next(1, 7);
+        int damage = Dice * AttackPower;
+        return DefensePower -= damage;
+    }
+} 
+public class Player : Entity //Child Class for Player
+{
+    int Health = 100;
+    int AttackPower = 5;
+    int DefencePower = 3;
+    string Name = "Gerald";
+
+    public Player(int health, int attackPower, int defensePower, string name) : base(health, attackPower, defensePower, name)
+    {
     }
 }
- 
+
+public class Enemy : Entity //Child Class for Enemy
+{
+    int Health = 100;
+    int AttackPower = 5;
+    int DefencePower = 3;
+    string Name = "Org";
+
+    public Enemy(int health, int attackPower, int defensePower, string name) : base(health, attackPower, defensePower, name)
+    {
+    }
+}
