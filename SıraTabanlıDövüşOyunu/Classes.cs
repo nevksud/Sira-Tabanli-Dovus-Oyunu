@@ -29,7 +29,8 @@ public class Entity //Parent class
         int damage = Dice * AttackPower;
         return DefensePower -= damage;
     }
-} 
+}
+ 
 public class Player : Entity //Child Class for Player
 {
     int Health = 100;
