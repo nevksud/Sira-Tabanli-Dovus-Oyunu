@@ -38,7 +38,7 @@ public class Player : Entity //Child Class for Player
     int PlayerDefencePower = 3;
     string PlayerName = "Gerald";
 
-    public Player(int health, int attackPower, int defensePower, string name) : base(health, attackPower, defensePower, name)
+    public Player(int Playerhealth, int PlayerattackPower, int PlayerdefensePower, string Playername) : base(health, attackPower, defensePower, name)
     {
     }
 }
@@ -50,7 +50,7 @@ public class Enemy : Entity //Child Class for Enemy
     int EnemyDefencePower = 3;
     string EnemyName = "Org";
 
-    public Enemy(int health, int attackPower, int defensePower, string name) : base(health, attackPower, defensePower, name)
+    public Enemy(int Enemyhealth, int EnemyattackPower, int EnemydefensePower, string Enemyname) : base(health, attackPower, defensePower, name)
     {
     }
 }
